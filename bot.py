@@ -8,6 +8,7 @@ from discord import app_commands
 
 load_dotenv()
 token = environ["TOKEN"]
+
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
@@ -56,8 +57,7 @@ async def invite(ctx):
         for guild in lucian.guilds:
             print(guild.name)
             if guild.name == "Werewolf":
-                await guild.edit(default_notifications=discord.NotificationLevel.only_mentions)
-                print("OK")
+                print("found guild")
             
                 
             
